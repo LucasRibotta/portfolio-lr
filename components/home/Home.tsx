@@ -4,7 +4,7 @@ import Perfil from '@/assets/perfil.jpg';
 
 const Home = () => {
     return (
-        <div className='min-h-[70vh] flex flex-col-reverse p-4 lg:grid lg:grid-cols-2 bg-white items-center rounded-[50px] overflow-hidden  shadow-lg shadow-slate-900' id="home">
+        <div className='min-h-[70vh] flex flex-col-reverse p-4 mt-4 lg:grid lg:grid-cols-2 bg-white items-center rounded-[50px] overflow-hidden  shadow-lg shadow-slate-900' id="home">
             <div className='px-6 md:px-12 flex flex-col gap-12 items-start'>
                 <div className='flex flex-col gap-4'>
                     <h1 className="drop-shadow-2xl text-2xl md:text-3xl mt-8 lg:mt-0 lg:text-[4.5rem] lg:leading-[4rem] font-extrabold mb-5">FrontEnd Web Developer</h1>
