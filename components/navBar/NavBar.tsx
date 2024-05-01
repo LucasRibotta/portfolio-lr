@@ -46,7 +46,7 @@ export default function NavBar() {
                     {menuItems.map((item, index) => (
                         <NavbarItem key={`${item}-${index}`}>
                             <Link
-                                className={`w-full ${selectedItem === index ? 'text-violet-900' : 'text-black'}`}
+                                className={`w-full ${selectedItem === index ? 'font-bold text-violet-900' : 'text-black'}`}
                                 href={item.link}
                                 id={item.name}
                                 size="lg"
@@ -62,7 +62,7 @@ export default function NavBar() {
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
                         <Link
-                            className={`w-full ${selectedItem === index ? 'text-blue-500' : 'text-black'}`}
+                            className={`w-full ${selectedItem === index ? 'font-bold text-violet-900' : 'text-black'}`}
                             href={item.link}
                             size="lg"
                             id={item.name}
