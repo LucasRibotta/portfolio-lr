@@ -12,7 +12,7 @@ const experiences = [
         technologies: ['React', 'TypeScript', 'Redux', 'Tailwind', 'Zustand'],
     },
     {
-        date: 'Jun 2023 - Dec 2023',
+        date: 'Ene 2022 - Dec 2023',
         position: 'Desarrollador Web',
         company: 'S.O.S Red de Asistencia',
         technologies: ['React', 'TypeScript', 'Bootstrap', 'Tailwind'],
