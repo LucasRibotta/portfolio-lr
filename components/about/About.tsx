@@ -12,7 +12,7 @@ const About = () => {
                     <h3 className='font-semibold text-xl md:text-2xl'>Un dedicado desarrollador FrontEnd</h3>
                     <p className='text-justify text-lg md:text-xl'>
                         Como desarrollador FrontEnd altamente calificado, domino una amplia gama de tecnologías esenciales, incluyendo <span className='font-bold'>React, Redux, JavaScript, TypeScript, Next.js, Flutter, Dart, CSS y HTML.</span> Mi enfoque se centra en diseñar y desarrollar aplicaciones web sofisticadas que garanticen un rendimiento óptimo y una experiencia excepcional para el usuario. Con sólidas habilidades analíticas y un enfoque proactivo, estoy preparado para superar los desafíos técnicos y entregar productos de alta calidad que satisfagan las necesidades de mis clientes. Estoy aquí para ayudarte con cualquier pregunta o problema relacionado con el desarrollo FrontEnd.</p>
-                    <a href='https://docs.google.com/document/d/1QcgpdByonaFppz6LTYWRjhnBsvn4kPqw/edit?usp=drive_link&ouid=113773497525988917324&rtpof=true&sd=true' className='text-2xl mt-[1rem] text-center items-center px-6 py-3 bg-violet-900 font-semibold text-white rounded-md hover:bg-violet-600 hover:text-violet-900 transition-all duration-300 ' target='blank' >Curriculum</a>
+                    <a href='https://docs.google.com/document/d/1sBn1lfxO2Dhezv_1LNKoke610HtxyfPzD3tsjCKc8Iw/edit?usp=drive_link' className='text-2xl mt-[1rem] text-center items-center px-6 py-3 bg-violet-900 font-semibold text-white rounded-md hover:bg-violet-600 hover:text-violet-900 transition-all duration-300 ' target='blank' >Curriculum</a>
                 </div>
             </div>
             <div className='grid items-center justify-center'>
