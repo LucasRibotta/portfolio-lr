@@ -1,12 +1,13 @@
 import React from 'react'
 import experiences from './data';
+import PropsLenguage from '../utils/lenguage';
 
-const Experience = () => {
+const Experience = ({ lenguage }: PropsLenguage) => {
 
 
     return (
         <div className="flex flex-col items-center " id='experience'>
-            <h2 className="text-3xl font-bold text-violet-900 mb-4">Experiencia laboral</h2>
+            <h2 className="text-3xl font-bold text-violet-900 mb-4">{lenguage === 'Es' ? 'Experiencia laboral' : 'Work Experience'}</h2>
             <div className='py-4 flex flex-col md:flex-row md:flex-wrap justify-center gap-12 md:gap-20'>
                 {experiences.map((experience, index) => (
                     <div key={index} className="mb-4">

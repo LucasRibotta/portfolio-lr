@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import {
     Navbar,
@@ -9,32 +9,44 @@ import {
     NavbarMenu,
     NavbarMenuItem,
     Link,
+    Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button
 } from "@nextui-org/react";
+import PropsLenguage from "../utils/lenguage";
+import DropDownComponent from "../dropDown/DropDownComponent";
 
-export default function NavBar() {
+export default function NavBar({ lenguage, handleLenguageChange }: PropsLenguage) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState<Number>(0);
+    const [selectedItem, setSelectedItem] = useState<number>(1);
 
-    const menuItems = [
-        { "name": "Inicio", "link": "#home" },
-        { "name": "Tecnologías", "link": "#technologies" },
-        { "name": "Acerca de mi", "link": "#about" },
-        { "name": "Proyectos", "link": "#project" },
-        { "name": "Experiencia", "link": "#experience" },
-
+    const menuItemsEs = [
+        { id: 1, name: "Inicio", link: "#home" },
+        { id: 2, name: "Tecnologías", link: "#technologies" },
+        { id: 3, name: "Acerca de mí", link: "#about" },
+        { id: 4, name: "Proyectos", link: "#project" },
+        { id: 5, name: "Experiencia", link: "#experience" },
     ];
 
-    const handleItemClick = (index: Number) => {
+    const menuItemsEn = [
+        { id: 1, name: "Home", link: "#home" },
+        { id: 2, name: "Technologies", link: "#technologies" },
+        { id: 3, name: "About", link: "#about" },
+        { id: 4, name: "Projects", link: "#project" },
+        { id: 5, name: "Experience", link: "#experience" },
+    ];
+
+    const handleItemClick = (index: number) => {
         setSelectedItem(index);
         setIsMenuOpen(false);
     };
 
+    const menuItems = lenguage === 'Es' ? menuItemsEs : menuItemsEn;
+
     return (
         <Navbar
-            className="w-full bg-gray-200 bg-opacity-30 shadow-md shadow-gray-400 fixed"
+            className=" bg-gray-200 bg-opacity-30 shadow-md shadow-gray-400 fixed"
             onMenuOpenChange={setIsMenuOpen}
         >
-            <NavbarContent className="flex justify-between items-center">
+            <NavbarContent className="w-full flex justify-between items-center">
                 <NavbarBrand>
                     <p className="font-bold text-inherit">Lucas.dev</p>
                 </NavbarBrand>
@@ -42,36 +54,50 @@ export default function NavBar() {
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     className="md:hidden"
                 />
-                <NavbarContent className="hidden md:flex gap-4" justify="end">
-                    {menuItems.map((item, index) => (
-                        <NavbarItem key={`${item}-${index}`}>
+                <NavbarContent className="hidden md:flex gap-8" >
+                    {menuItems.map((item) => (
+                        <NavbarItem key={item.id}>
                             <Link
-                                className={`w-full ${selectedItem === index ? 'font-bold text-violet-900' : 'text-black'}`}
+                                className={`w-full ${selectedItem === item.id ? 'font-bold text-violet-900' : 'text-black'}`}
                                 href={item.link}
                                 id={item.name}
                                 size="lg"
-                                onClick={() => handleItemClick(index)}
+                                onClick={() => handleItemClick(item.id)}
                             >
                                 {item.name}
                             </Link>
                         </NavbarItem>
                     ))}
+                    <NavbarItem className="ml-4">
+                        <DropDownComponent
+                            lenguage={lenguage}
+                            handleLenguageChange={handleLenguageChange}
+                        />
+                    </NavbarItem>
                 </NavbarContent>
+
             </NavbarContent>
             <NavbarMenu>
                 {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
+                    <NavbarMenuItem key={item.id}>
                         <Link
-                            className={`w-full ${selectedItem === index ? 'font-bold text-violet-900' : 'text-black'}`}
+                            className={`w-full ${selectedItem === item.id ? 'font-bold text-violet-900' : 'text-black'}`}
                             href={item.link}
-                            size="lg"
                             id={item.name}
-                            onClick={() => handleItemClick(index)}
+                            size="lg"
+                            onClick={() => handleItemClick(item.id)}
                         >
                             {item.name}
                         </Link>
                     </NavbarMenuItem>
                 ))}
+                <NavbarMenuItem>
+                    <DropDownComponent
+                        lenguage={lenguage}
+                        handleLenguageChange={handleLenguageChange}
+                    />
+                </NavbarMenuItem>
+
             </NavbarMenu>
         </Navbar>
     );
