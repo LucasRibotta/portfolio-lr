@@ -15,7 +15,7 @@ import PropsLenguage from '../utils/lenguage'
 const Technologies = ({ lenguage }: PropsLenguage) => {
 
     return (
-        <div className='min-h-[20vh] flex flex-col px-4 bg-white justify-center items-center rounded-[50px] overflow-hidden  shadow-lg shadow-slate-900' id="technologies">
+        <div className='min-h-[30vh] md:min-h-[20vh] flex flex-col px-4 bg-white justify-center items-center rounded-[50px] overflow-hidden  shadow-lg shadow-slate-900' id="technologies">
             <div className="w-[80%] justify-center flex  flex-wrap items-center">
                 <h2 className="text-3xl text-violet-900 font-bold">{lenguage === 'Es' ? 'Tecnologías:' : 'Technologies:'}</h2>
                 <Image src={Html} alt="Html" title="Html" className="h-[65px] w-[65px] object-scale-down m-auto " />

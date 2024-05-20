@@ -8,7 +8,7 @@ const Home = () => {
         <div className='min-h-[70vh] flex flex-col-reverse p-4 mt-4 lg:grid lg:grid-cols-2 bg-white items-center rounded-[50px] overflow-hidden  shadow-lg shadow-slate-900' id="home">
             <div className='px-6 md:px-12 flex flex-col gap-12 items-start'>
                 <div className='flex flex-col gap-4'>
-                    <h1 className="drop-shadow-2xl text-2xl md:text-3xl mt-8 lg:mt-0 lg:text-[4.5rem] lg:leading-[4rem] font-extrabold mb-5">FrontEnd Web Developer</h1>
+                    <h1 className="text-violet-900 underline underline-offset-8 drop-shadow-2xl text-2xl md:text-3xl mt-8 lg:mt-0 lg:text-[4.5rem] lg:leading-[4rem] font-extrabold mb-5">FrontEnd Web Developer</h1>
                     <h2 className='text-2xl text-violet-800 font-extrabold'>Hola mi nombre es Lucas Ribotta!</h2>
 
                     <div className='flex flex-col text-base md:text-xl'>

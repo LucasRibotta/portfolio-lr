@@ -1,6 +1,6 @@
 const experiences = [
     {
-        date: 'Ene 2023 - Actualidad',
+        date: 'Ene 2024 - May 2024',
         position: 'Desarrollador Full Stack',
         company: 'Carvuz',
         technologies: ['Flutter', 'Dart', 'AWS'],
