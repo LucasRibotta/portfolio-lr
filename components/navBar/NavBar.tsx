@@ -42,43 +42,45 @@ export default function NavBar({ lenguage, handleLenguageChange }: PropsLenguage
     const menuItems = lenguage === 'Es' ? menuItemsEs : menuItemsEn;
 
     return (
+
         <Navbar
-            className=" bg-gray-200 bg-opacity-30 shadow-md shadow-gray-400 fixed"
+            className="bg-gray-200 bg-opacity-30 shadow-md shadow-gray-400 fixed"
             onMenuOpenChange={setIsMenuOpen}
+            maxWidth="full"
         >
             <NavbarContent className="w-full flex justify-between items-center">
                 <NavbarBrand>
-                    <p className="font-bold text-inherit">Lucas.dev</p>
+                    <p className="font-bold text-inherit text-2xl text-violet-900">Lucas.dev</p>
                 </NavbarBrand>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     className="md:hidden"
                 />
-                <NavbarContent className="hidden md:flex gap-8" >
-                    {menuItems.map((item) => (
-                        <NavbarItem key={item.id}>
-                            <Link
-                                className={`w-full ${selectedItem === item.id ? 'font-bold text-violet-900' : 'text-black'}`}
-                                href={item.link}
-                                id={item.name}
-                                size="lg"
-                                onClick={() => handleItemClick(item.id)}
-                            >
-                                {item.name}
-                            </Link>
-                        </NavbarItem>
-                    ))}
-                    <NavbarItem className="ml-4">
-                        <DropDownComponent
-                            lenguage={lenguage}
-                            handleLenguageChange={handleLenguageChange}
-                        />
-                    </NavbarItem>
-                </NavbarContent>
 
             </NavbarContent>
+            <NavbarContent className="hidden md:flex items-center justify-items-end gap-8" >
+                {menuItems.map((item) => (
+                    <NavbarItem key={item.id}>
+                        <Link
+                            className={`w-full text-xl ${selectedItem === item.id ? 'font-bold text-violet-900' : 'text-black'}`}
+                            href={item.link}
+                            id={item.name}
+                            size="lg"
+                            onClick={() => handleItemClick(item.id)}
+                        >
+                            {item.name}
+                        </Link>
+                    </NavbarItem>
+                ))}
+                <NavbarItem>
+                    <DropDownComponent
+                        lenguage={lenguage}
+                        handleLenguageChange={handleLenguageChange}
+                    />
+                </NavbarItem>
+            </NavbarContent>
             <NavbarMenu>
-                {menuItems.map((item, index) => (
+                {menuItems.map((item) => (
                     <NavbarMenuItem key={item.id}>
                         <Link
                             className={`w-full ${selectedItem === item.id ? 'font-bold text-violet-900' : 'text-black'}`}
@@ -100,5 +102,6 @@ export default function NavBar({ lenguage, handleLenguageChange }: PropsLenguage
 
             </NavbarMenu>
         </Navbar>
+
     );
 }
