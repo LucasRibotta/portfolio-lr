@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio — Lucas Ribotta
 
-## Getting Started
+Personal site of Lucas Ribotta, Mobile Product Engineer.
 
-First, run the development server:
+Live: https://lucasr-dev.vercel.app
+
+## Stack
+
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4. No UI library, no
+animation library — every component is local, animation is CSS plus one
+`IntersectionObserver`.
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build
+npm run start
+npm run typecheck
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+app/
+  [locale]/            root layout, page, OG image, 404 — one route per locale
+  sitemap.ts robots.ts icon.svg
+proxy.ts               / → /en
+content/
+  en.ts es.ts          all copy, both typed against Dictionary
+  types.ts             the Dictionary contract
+  work.ts              featured projects (locale-independent data)
+  experience.ts        timeline entries
+  stack.ts             technology groups
+components/
+  layout/              Nav, Footer, LocaleSwitch, Backdrop
+  sections/            Hero, Capabilities, Work, Experience, About, Stack, Contact
+  ui/                  Section, Reveal, DeviceFrame, CopyEmail, Icons
+lib/
+  site.ts              URL, locales, links, CV, section ids
+  format.ts            locale-aware period formatting
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Copy lives in `content/`, never inside components. `es.ts` and `en.ts` are both typed as
+`Dictionary`, so a missing translation is a build error.
 
-## Learn More
+## Editing content
 
-To learn more about Next.js, take a look at the following resources:
+- **Copy** — `content/en.ts` and `content/es.ts`.
+- **Featured projects** — `content/work.ts` for data (name, status, stack, screenshot),
+  the `work.projects` key of each dictionary for the writing. Featured work is products
+  Lucas owns technically; paid roles belong in Experience, not here.
+- **Experience** — `content/experience.ts`. Dates are `YYYY-MM`; `end: null` renders as
+  "Present" / "Presente". `featured: true` gives an entry the highlighted treatment.
+- **Stack** — `content/stack.ts` for the technologies, `stack.groups` in each dictionary
+  for the group labels.
+- **Links, CV and site URL** — `lib/site.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project screenshots
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A project renders a phone mockup only when it has a screenshot; without one the case study
+runs full width. To add one, drop the image in `public/work/` and point the project at it:
 
-## Deploy on Vercel
+```ts
+// content/work.ts
+{ id: "orisen", name: "Orisen", status: "inDevelopment", screenshot: "/work/orisen.webp" }
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The frame's screen is 9:20, so a raw phone capture (1080×2400) fits with no crop. Downscale
+to 720px wide and save as WebP before committing — a raw PNG capture is ~3 MB, the WebP is
+~45 KB and `next/image` serves an even smaller variant.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+
+Vercel, from `main`. `SITE_URL` in `lib/site.ts` drives canonical URLs, hreflang, the
+sitemap and the OpenGraph image — change it there when the domain changes.
