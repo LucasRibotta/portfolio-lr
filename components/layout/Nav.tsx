@@ -129,7 +129,7 @@ export function Nav({ locale, labels, menu, languageLabel }: NavProps) {
               aria-label={open ? menu.close : menu.open}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="inline-flex size-10 items-center justify-center rounded-full border border-line text-fg transition-colors duration-200 hover:border-line-strong md:hidden"
+              className="inline-flex size-10 items-center justify-center rounded-full border border-control text-fg transition-colors duration-200 hover:border-muted md:hidden"
             >
               {open ? (
                 <CloseIcon className="size-5" />

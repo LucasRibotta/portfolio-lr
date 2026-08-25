@@ -63,7 +63,7 @@ export function Contact({ content }: ContactProps) {
                   href={document.href}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="group inline-flex min-h-12 w-full items-center justify-between gap-4 rounded-full border border-line px-5 text-sm text-fg transition-colors duration-200 hover:border-line-strong hover:bg-surface sm:w-auto sm:min-w-[16rem]"
+                  className="group inline-flex min-h-12 w-full items-center justify-between gap-4 rounded-full border border-control px-5 text-sm text-fg transition-colors duration-200 hover:border-muted hover:bg-surface sm:w-auto sm:min-w-[16rem]"
                 >
                   {document.label}
                   <DownloadIcon className="size-4 text-faint transition-colors duration-200 group-hover:text-accent" />

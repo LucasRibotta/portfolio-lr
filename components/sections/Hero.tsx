@@ -90,7 +90,7 @@ export function Hero({ content, cvHref }: HeroProps) {
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex h-12 items-center justify-center rounded-full border border-line-strong px-6 text-sm font-medium text-fg transition-colors duration-200 hover:border-muted hover:bg-surface"
+                  className="inline-flex h-12 items-center justify-center rounded-full border border-control px-6 text-sm font-medium text-fg transition-colors duration-200 hover:border-muted hover:bg-surface"
                 >
                   {content.secondaryCta}
                 </a>

@@ -20,7 +20,7 @@ export default function NotFound() {
           </h1>
           <Link
             href={`/${defaultLocale}`}
-            className="group mt-8 inline-flex h-12 items-center gap-2 rounded-full border border-line-strong px-6 text-sm font-medium text-fg transition-colors duration-200 hover:border-muted hover:bg-surface"
+            className="group mt-8 inline-flex h-12 items-center gap-2 rounded-full border border-control px-6 text-sm font-medium text-fg transition-colors duration-200 hover:border-muted hover:bg-surface"
           >
             Back to home
             <ArrowRightIcon className="size-4 transition-transform duration-200 group-hover:translate-x-0.5" />

@@ -2,13 +2,14 @@
 
 @theme {
   --color-bg: #08090a;
-  --color-surface: #0c0e0f;
-  --color-raised: #121416;
-  --color-line: #1c1f22;
-  --color-line-strong: #2b2f34;
+  --color-surface: #0e1013;
+  --color-raised: #171a1e;
+  --color-line: #23272c;
+  --color-line-strong: #3a4048;
+  --color-control: #5c6068;
   --color-fg: #edeef0;
-  --color-muted: #9096a0;
-  --color-faint: #61666f;
+  --color-muted: #a6acb6;
+  --color-faint: #838a95;
   --color-accent: #5ee6d0;
   --color-accent-soft: #1d3f3a;
 

@@ -32,7 +32,7 @@ export function CopyEmail({ email, copyLabel, copiedLabel }: CopyEmailProps) {
       type="button"
       onClick={handleCopy}
       aria-label={copyLabel}
-      className="inline-flex h-11 items-center gap-2 rounded-full border border-line px-4 font-mono text-xs tracking-wide text-muted uppercase transition-colors duration-200 hover:border-line-strong hover:text-fg"
+      className="inline-flex h-11 items-center gap-2 rounded-full border border-control px-4 font-mono text-xs tracking-wide text-muted uppercase transition-colors duration-200 hover:border-muted hover:text-fg"
     >
       {copied ? (
         <CheckIcon className="size-4 text-accent" />

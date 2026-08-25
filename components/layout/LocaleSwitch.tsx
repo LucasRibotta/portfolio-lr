@@ -20,7 +20,7 @@ export function LocaleSwitch({
     <div
       role="group"
       aria-label={label}
-      className={`inline-flex items-center rounded-full border border-line p-0.5${className ? ` ${className}` : ""}`}
+      className={`inline-flex items-center rounded-full border border-control p-0.5${className ? ` ${className}` : ""}`}
     >
       {locales.map((value) => {
         const active = value === locale;
