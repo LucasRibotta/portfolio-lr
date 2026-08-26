@@ -93,7 +93,7 @@ export type Dictionary = {
     socialLabel: string;
   };
   footer: {
-    credit: string;
+    rights: string;
     backToTop: string;
   };
 };
