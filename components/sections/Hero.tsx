@@ -36,14 +36,9 @@ export function Hero({ content, cvHref }: HeroProps) {
     <section
       id="home"
       aria-labelledby="home-title"
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-28 pb-14 sm:pt-32"
+      className="relative flex min-h-[100svh] flex-col justify-center pt-28 pb-14 sm:pt-32"
     >
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="grid-lines absolute inset-0" />
-        <div className="absolute inset-x-0 top-0 h-[38rem] bg-[radial-gradient(ellipse_70%_45%_at_50%_-10%,color-mix(in_srgb,var(--color-accent)_9%,transparent),transparent_70%)]" />
-      </div>
-
-      <div className="relative container-page">
+      <div className="container-page">
         <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-8">
             <Rise>
