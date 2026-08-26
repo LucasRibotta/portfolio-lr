@@ -206,7 +206,7 @@ const es: Dictionary = {
     socialLabel: "En otros lados",
   },
   footer: {
-    credit: "Diseñado y construido por Lucas Ribotta",
+    rights: "Lucas Ribotta. Todos los derechos reservados.",
     backToTop: "Volver arriba",
   },
 };

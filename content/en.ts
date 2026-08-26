@@ -205,7 +205,7 @@ const en: Dictionary = {
     socialLabel: "Elsewhere",
   },
   footer: {
-    credit: "Designed & built by Lucas Ribotta",
+    rights: "Lucas Ribotta. All rights reserved.",
     backToTop: "Back to top",
   },
 };
