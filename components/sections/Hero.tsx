@@ -1,9 +1,9 @@
+import { EmailLink } from "@/components/ui/EmailLink";
 import {
   ArrowRightIcon,
   DownloadIcon,
   GitHubIcon,
   LinkedInIcon,
-  MailIcon,
 } from "@/components/ui/Icons";
 import { Rise } from "@/components/ui/Rise";
 import type { Dictionary } from "@/content/types";
@@ -23,14 +23,12 @@ export function Hero({ content, cvHref }: HeroProps) {
       external: true,
     },
     { href: social.github, label: "GitHub", Icon: GitHubIcon, external: true },
-    {
-      href: `mailto:${EMAIL}`,
-      label: "Email",
-      Icon: MailIcon,
-      external: false,
-    },
-    { href: cvHref, label: "CV", Icon: DownloadIcon, external: true },
   ];
+
+  const linkClass =
+    "group inline-flex min-h-11 items-center gap-2 text-sm text-muted transition-colors duration-200 hover:text-fg";
+  const iconClass =
+    "size-4 text-faint transition-colors duration-200 group-hover:text-accent";
 
   return (
     <section
@@ -101,13 +99,30 @@ export function Hero({ content, cvHref }: HeroProps) {
                       {...(external
                         ? { target: "_blank", rel: "noreferrer noopener" }
                         : {})}
-                      className="group inline-flex min-h-11 items-center gap-2 text-sm text-muted transition-colors duration-200 hover:text-fg"
+                      className={linkClass}
                     >
-                      <Icon className="size-4 text-faint transition-colors duration-200 group-hover:text-accent" />
+                      <Icon className={iconClass} />
                       {label}
                     </a>
                   </li>
                 ))}
+
+                <li>
+                  <EmailLink
+                    email={EMAIL}
+                    label={content.emailLabel}
+                    copiedLabel={content.emailCopied}
+                    className={linkClass}
+                    iconClassName={iconClass}
+                  />
+                </li>
+
+                <li>
+                  <a href={cvHref} download className={linkClass}>
+                    <DownloadIcon className={iconClass} />
+                    {content.cvLabel}
+                  </a>
+                </li>
               </ul>
             </Rise>
           </div>
@@ -142,7 +157,23 @@ export function Hero({ content, cvHref }: HeroProps) {
         </div>
 
         <Rise delay={420}>
-          <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-6 font-mono text-xs tracking-wide text-faint">
+          <dl className="mt-12 grid grid-cols-3 gap-x-4 border-t border-line pt-6 sm:gap-x-8">
+            {content.stats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="sr-only">{stat.label}</dt>
+                <dd className="m-0">
+                  <span className="block text-sm font-medium text-fg sm:text-base">
+                    {stat.value}
+                  </span>
+                  <span className="mt-1 block font-mono text-[0.65rem] leading-tight tracking-[0.1em] text-faint uppercase sm:text-[0.7rem]">
+                    {stat.label}
+                  </span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-line pt-6 font-mono text-xs tracking-wide text-faint">
             <span>{content.location}</span>
             <span aria-hidden="true">·</span>
             <span>{content.remote}</span>

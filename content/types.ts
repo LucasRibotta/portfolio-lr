@@ -1,14 +1,12 @@
 import type { ExperienceId } from "./experience";
 import type { StackGroupId } from "./stack";
-import type { WorkId, WorkStatus } from "./work";
+import type { SideId, WorkId, WorkStatus } from "./work";
 import type { SectionId } from "@/lib/site";
 
 export const capabilityIds = [
   "mobile",
   "architecture",
   "product",
-  "ownership",
-  "performance",
   "ai",
 ] as const;
 
@@ -39,6 +37,10 @@ export type Dictionary = {
     secondaryCta: string;
     location: string;
     remote: string;
+    emailLabel: string;
+    emailCopied: string;
+    cvLabel: string;
+    stats: readonly { value: string; label: string }[];
     scrollHint: string;
     nowLabel: string;
     now: readonly { role: string; company: string }[];
@@ -54,18 +56,41 @@ export type Dictionary = {
     contributionLabel: string;
     highlightsLabel: string;
     stackLabel: string;
+    gallery: {
+      open: string;
+      close: string;
+      previous: string;
+      next: string;
+      position: string;
+    };
     status: Record<WorkStatus, string>;
     projects: Record<
       WorkId,
       {
+        name?: string;
         kind: string;
         role: string;
         tagline: string;
         context: string;
         contribution: string;
         highlights: readonly string[];
+        visualLabel?: string;
+        visualCaption?: string;
+        flow?: readonly { title: string; detail: string }[];
+        shots?: readonly string[];
+        deepDive?: {
+          label: string;
+          body: string;
+          points: readonly string[];
+        };
       }
     >;
+    also: {
+      label: string;
+      intro: string;
+      cta: string;
+      items: Record<SideId, { kind: string; blurb: string }>;
+    };
   };
   experience: SectionHeading & {
     present: string;
@@ -88,8 +113,7 @@ export type Dictionary = {
     copy: string;
     copied: string;
     cvLabel: string;
-    cvEn: string;
-    cvEs: string;
+    cvDownload: string;
     socialLabel: string;
   };
   footer: {

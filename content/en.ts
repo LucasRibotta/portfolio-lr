@@ -25,6 +25,14 @@ const en: Dictionary = {
     lead: "I build and evolve cross-platform mobile products — owning architecture, technical decisions, performance and delivery to the App Store and Google Play.",
     primaryCta: "View my work",
     secondaryCta: "Contact me",
+    emailLabel: "Email",
+    emailCopied: "Address copied",
+    cvLabel: "CV",
+    stats: [
+      { value: "4+ years", label: "Software development" },
+      { value: "2+ years", label: "Mobile development" },
+      { value: "iOS & Android", label: "Production delivery" },
+    ],
     location: "Córdoba, Argentina",
     remote: "Working remotely",
     scrollHint: "Scroll",
@@ -38,7 +46,7 @@ const en: Dictionary = {
   },
   capabilities: {
     eyebrow: "Capabilities",
-    title: "Engineering that goes past the ticket.",
+    title: "Engineering beyond the ticket.",
     intro:
       "The mobile layer is where I go deepest, but the work rarely stops at implementation.",
     items: {
@@ -47,42 +55,81 @@ const en: Dictionary = {
         body: "Cross-platform applications for iOS and Android with React Native, Expo, Flutter and TypeScript.",
       },
       architecture: {
-        title: "Architecture",
-        body: "Modular, maintainable systems built on Clean Architecture principles, offline-first patterns and structures that scale with the product.",
+        title: "Architecture & Performance",
+        body: "Modular, maintainable systems built on Clean Architecture principles and offline-first patterns — and the work of keeping applications already in production fast, reliable and cheap to change.",
       },
       product: {
         title: "Product Engineering",
         body: "Reading business requirements and turning them into technical solutions, instead of implementing tickets in isolation.",
       },
-      ownership: {
-        title: "Technical Ownership",
-        body: "Features and products carried from technical definition through implementation, integration, release and production maintenance.",
-      },
-      performance: {
-        title: "Performance",
-        body: "Improving the performance, reliability and maintainability of applications already running in production.",
-      },
       ai: {
         title: "AI-assisted Engineering",
-        body: "Claude Code, Codex and AI-assisted workflows for implementation, architecture exploration, debugging and reviews — the technical decisions stay mine.",
+        body: "Claude Code, Codex and AI-assisted workflows for implementation, architecture exploration, debugging and reviews — accelerating delivery without outsourcing technical judgment.",
       },
     },
   },
   work: {
     eyebrow: "Selected work",
-    title: "Products where I own the technical side.",
+    title: "Work where I own the technical side.",
     intro:
-      "From architecture and technical definition through to what a user installs on their phone.",
+      "Products and production codebases, from architecture and technical definition through to what a user installs on their phone.",
     roleLabel: "Role",
     contextLabel: "Context",
     contributionLabel: "What I work on",
     highlightsLabel: "Technical highlights",
     stackLabel: "Stack",
+    gallery: {
+      open: "View screens",
+      close: "Close",
+      previous: "Previous screen",
+      next: "Next screen",
+      position: "Screen",
+    },
+    also: {
+      label: "Also built",
+      intro:
+        "Outside the mobile track, and finished enough to open.",
+      cta: "Play it",
+      items: {
+        nightmareJordi: {
+          kind: "Game · Unity",
+          blurb:
+            "A 2D platformer where the dog cannot fight, only run and bark. Barking scares small animals and attracts big ones, so the same button is both the tool and the risk. Built and published as a WebGL build.",
+        },
+      },
+    },
     status: {
       inDevelopment: "In development",
       production: "In production",
+      playable: "Playable",
     },
     projects: {
+      odaclick: {
+        kind: "Client work · OdaClick",
+        role: "Mobile Developer",
+        tagline:
+          "Cross-platform applications shipped to the App Store and Google Play.",
+        context:
+          "Mobile work on real products with real users: some started from nothing, others were codebases already live that had to keep running while they evolved. Client details stay confidential, so what is described here is the engineering, not the businesses behind it.",
+        contribution:
+          "I take features end to end — technical definition, architecture, implementation, release and what happens after it. That means offline-first flows so the application keeps working without a connection, REST API integration, background processes and notifications, and owning the release train across both stores.",
+        highlights: [
+          "React Native, Expo and Flutter in the same working week",
+          "Offline-first architecture with local persistence",
+          "REST API integration with error and retry handling",
+          "Background processes and push notifications",
+          "Performance work on codebases already in production",
+          "Releases with EAS, TestFlight, App Store and Google Play",
+        ],
+        visualLabel: "Release path",
+        visualCaption:
+          "The delivery pipeline I own, from build to store listing.",
+        flow: [
+          { title: "Build", detail: "EAS, iOS and Android" },
+          { title: "Test", detail: "TestFlight, internal testing" },
+          { title: "Release", detail: "App Store, Google Play" },
+        ],
+      },
       orisen: {
         kind: "Product · Co-founded",
         role: "Co-Founder & Tech Lead",
@@ -99,6 +146,46 @@ const en: Dictionary = {
           "iOS and Android delivery",
           "Technical leadership and product roadmap",
         ],
+        visualLabel: "System overview",
+        visualCaption:
+          "A schematic of the product, not a screenshot: the application talks to dedicated hardware over Bluetooth LE and turns what it senses into guidance.",
+        flow: [
+          { title: "Mobile app", detail: "React Native, Expo" },
+          { title: "Bluetooth LE", detail: "Two-way link" },
+          { title: "Hardware", detail: "Dedicated device" },
+        ],
+      },
+      cielo: {
+        kind: "Personal product",
+        role: "Product & Engineering",
+        tagline:
+          "Point your phone at the night sky and a voice tells you what you are looking at. No signal needed.",
+        context:
+          "Outside, at night, a screen is the wrong interface: it ruins your night vision and there is often no connection. Cielo keeps the screen black. You raise the phone, hold still, and it says the name of what is in front of you.",
+        contribution:
+          "An Expo application where the language model runs on the phone itself, with no network call. A small model left to talk on its own invents things, so it never gets to: it is handed the facts, from a star catalogue and a hand-curated body of mythology, and its only job is to retell them. A myth that is not in the corpus cannot be told — that is a guarantee of the architecture, not a hope pinned on the prompt.",
+        highlights: [
+          "Language model running on the device, fully offline",
+          "Sensor fusion to resolve what the phone is pointed at",
+          "Voice-first interaction — usable without looking at the screen",
+          "Clean Architecture: a pure domain with no framework in it",
+          "Domain tests that run in Node, with no emulator",
+          "Built with Expo Router and shipped through EAS",
+        ],
+        visualLabel: "Screens",
+        shots: [
+          "Tonight's sky, the moment you open it",
+          "The welcome — no signal, no account, no server",
+          "Location, so it knows what is visible from here",
+          "Eclipse and meteor shower alerts, scheduled on the phone",
+          "Camera, to draw the sky over the live image",
+          "The astral section, before any birth data is loaded",
+          "Today's transits against your own chart",
+          "The natal chart, computed on the device",
+          "Your life — the slow transits, newest first",
+          "About: what leaves the phone and what never does",
+          "Sky mode, with the screen kept dark",
+        ],
       },
       wyrdvow: {
         kind: "Personal product",
@@ -106,16 +193,33 @@ const en: Dictionary = {
         tagline:
           "A narrative RPG where the oath you swear changes how the world answers.",
         context:
-          "Wyrdvow is a narrative RPG where each player forges an oath that changes the fate of their story. AI does not create the world: it personalizes how that world responds to who the player decided to become.",
+          "A mobile game where you swear an oath at the start and the story bends around it. Every player ends up with a different run, and the world stays consistent with the character they decided to become.",
         contribution:
-          "I design and build the whole system: an Nx monorepo holding an Expo application, a NestJS API and pure shared libraries. The rules live in a deterministic engine isolated from any framework, contracts are shared between client and server, and AI sits behind ports so a provider can be swapped without the game knowing.",
+          "I do all of it: design, mobile application, server and the rules the game runs on. AI does not invent the world — it personalizes how an already-written world responds to each player, which keeps the story coherent instead of random.",
         highlights: [
-          "Nx monorepo: Expo app, NestJS API and pure domain libraries",
-          "Deterministic engine for rolls, predicates and progression",
-          "Zod contracts shared between mobile and API",
-          "AI behind ports, with interchangeable text and image providers",
-          "PostgreSQL and Prisma, with an admin dashboard",
-          "Narrative state that stays coherent across a full run",
+          "Designed, built and maintained solo",
+          "Mobile application for iOS and Android",
+          "A rules engine that always resolves the same way",
+          "AI used for personalization, not for improvisation",
+          "Narrative state that holds together across a full run",
+        ],
+        deepDive: {
+          label: "Technical deep dive",
+          body: "An Nx monorepo holds an Expo application, a NestJS API and pure shared libraries. The rules live in a deterministic engine isolated from any framework, contracts are shared between client and server, and AI sits behind ports so a provider can be swapped without the game knowing.",
+          points: [
+            "Nx monorepo: Expo app, NestJS API and pure domain libraries",
+            "Deterministic engine for rolls, predicates and progression",
+            "Zod contracts shared between mobile and API",
+            "AI behind ports, with interchangeable text and image providers",
+            "PostgreSQL and Prisma, with an admin dashboard",
+          ],
+        },
+        visualLabel: "Screens",
+        shots: [
+          "Welcome screen",
+          "The oath",
+          "Start of a run",
+          "Lobby, with the forged portrait",
         ],
       },
     },
@@ -200,8 +304,7 @@ const en: Dictionary = {
     copy: "Copy email address",
     copied: "Copied",
     cvLabel: "Résumé",
-    cvEn: "Download CV — EN",
-    cvEs: "Download CV — ES",
+    cvDownload: "Download CV (PDF)",
     socialLabel: "Elsewhere",
   },
   footer: {

@@ -9,7 +9,7 @@ import {
   MenuIcon,
 } from "@/components/ui/Icons";
 import {
-  cv,
+  cvHref,
   EMAIL,
   sections,
   social,
@@ -188,13 +188,14 @@ export function Nav({ locale, labels, menu, languageLabel }: NavProps) {
                   Icon: LinkedInIcon,
                 },
                 { href: social.github, label: "GitHub", Icon: GitHubIcon },
-                { href: cv[locale], label: "CV", Icon: DownloadIcon },
-              ].map(({ href, label, Icon }) => (
+                { href: cvHref, label: "CV", Icon: DownloadIcon, file: true },
+              ].map(({ href, label, Icon, file }) => (
                 <li key={label}>
                   <a
                     href={href}
-                    target="_blank"
-                    rel="noreferrer noopener"
+                    {...(file
+                      ? { download: true }
+                      : { target: "_blank", rel: "noreferrer noopener" })}
                     className="inline-flex min-h-11 items-center gap-2 text-sm text-muted"
                   >
                     <Icon className="size-4 text-faint" />

@@ -10,7 +10,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Stack } from "@/components/sections/Stack";
 import { Work } from "@/components/sections/Work";
 import { getDictionary } from "@/content";
-import { cv, EMAIL, isLocale, SITE_URL, social } from "@/lib/site";
+import { cvHref, EMAIL, isLocale, SITE_URL, social } from "@/lib/site";
 
 type PageProps = { params: Promise<{ locale: string }> };
 
@@ -55,10 +55,10 @@ export default async function HomePage({ params }: PageProps) {
       />
 
       <main id="main">
-        <Hero content={dict.hero} cvHref={cv[locale]} />
-        <Capabilities content={dict.capabilities} />
+        <Hero content={dict.hero} cvHref={cvHref} />
         <Work content={dict.work} />
         <Experience content={dict.experience} locale={locale} />
+        <Capabilities content={dict.capabilities} />
         <About content={dict.about} />
         <Stack content={dict.stack} />
         <Contact content={dict.contact} />

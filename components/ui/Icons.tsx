@@ -98,3 +98,31 @@ export function CloseIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function ExpandIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path
+        d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5"
+        {...strokeProps}
+      />
+    </svg>
+  );
+}
+
+export function ExternalLinkIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path d="M14 4h6v6M20 4l-8.5 8.5" {...strokeProps} />
+      <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" {...strokeProps} />
+    </svg>
+  );
+}
+
+export function PlusIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 12 12" className={className} aria-hidden="true">
+      <path d="M6 1.75v8.5M1.75 6h8.5" {...strokeProps} />
+    </svg>
+  );
+}

@@ -15,7 +15,7 @@ export function Experience({ content, locale }: ExperienceProps) {
   return (
     <Section
       id="experience"
-      index="03"
+      index="02"
       eyebrow={content.eyebrow}
       title={content.title}
     >

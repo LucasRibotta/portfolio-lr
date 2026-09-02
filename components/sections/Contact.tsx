@@ -7,18 +7,13 @@ import {
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import type { Dictionary } from "@/content/types";
-import { cv, EMAIL, social } from "@/lib/site";
+import { cvHref, EMAIL, social } from "@/lib/site";
 
 type ContactProps = {
   content: Dictionary["contact"];
 };
 
 export function Contact({ content }: ContactProps) {
-  const documents = [
-    { href: cv.en, label: content.cvEn },
-    { href: cv.es, label: content.cvEs },
-  ];
-
   const profiles = [
     { href: social.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
     { href: social.github, label: "GitHub", Icon: GitHubIcon },
@@ -56,21 +51,14 @@ export function Contact({ content }: ContactProps) {
           <h3 className="font-mono text-xs tracking-[0.16em] text-faint uppercase">
             {content.cvLabel}
           </h3>
-          <ul className="mt-4 flex flex-col gap-3">
-            {documents.map((document) => (
-              <li key={document.href}>
-                <a
-                  href={document.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="group inline-flex min-h-12 w-full items-center justify-between gap-4 rounded-full border border-control px-5 text-sm text-fg transition-colors duration-200 hover:border-muted hover:bg-surface sm:w-auto sm:min-w-[16rem]"
-                >
-                  {document.label}
-                  <DownloadIcon className="size-4 text-faint transition-colors duration-200 group-hover:text-accent" />
-                </a>
-              </li>
-            ))}
-          </ul>
+          <a
+            href={cvHref}
+            download
+            className="group mt-4 inline-flex min-h-12 w-full items-center justify-between gap-4 rounded-full border border-control px-5 text-sm text-fg transition-colors duration-200 hover:border-muted hover:bg-surface sm:w-auto sm:min-w-[16rem]"
+          >
+            {content.cvDownload}
+            <DownloadIcon className="size-4 text-faint transition-colors duration-200 group-hover:text-accent" />
+          </a>
 
           <h3 className="mt-10 font-mono text-xs tracking-[0.16em] text-faint uppercase">
             {content.socialLabel}

@@ -10,13 +10,13 @@ export function Capabilities({ content }: CapabilitiesProps) {
   return (
     <Section
       id="capabilities"
-      index="01"
+      index="03"
       eyebrow={content.eyebrow}
       title={content.title}
       intro={content.intro}
     >
       <Reveal>
-        <ul className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2">
           {capabilityIds.map((id, index) => {
             const item = content.items[id];
             return (
