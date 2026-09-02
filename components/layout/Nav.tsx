@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import {
   CloseIcon,
-  DownloadIcon,
+  ExternalLinkIcon,
   GitHubIcon,
   LinkedInIcon,
   MenuIcon,
@@ -188,14 +188,13 @@ export function Nav({ locale, labels, menu, languageLabel }: NavProps) {
                   Icon: LinkedInIcon,
                 },
                 { href: social.github, label: "GitHub", Icon: GitHubIcon },
-                { href: cvHref, label: "CV", Icon: DownloadIcon, file: true },
-              ].map(({ href, label, Icon, file }) => (
+                { href: cvHref, label: "CV", Icon: ExternalLinkIcon },
+              ].map(({ href, label, Icon }) => (
                 <li key={label}>
                   <a
                     href={href}
-                    {...(file
-                      ? { download: true }
-                      : { target: "_blank", rel: "noreferrer noopener" })}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="inline-flex min-h-11 items-center gap-2 text-sm text-muted"
                   >
                     <Icon className="size-4 text-faint" />

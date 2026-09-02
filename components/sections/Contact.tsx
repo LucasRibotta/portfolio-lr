@@ -1,6 +1,6 @@
 import { CopyEmail } from "@/components/ui/CopyEmail";
 import {
-  DownloadIcon,
+  ExternalLinkIcon,
   GitHubIcon,
   LinkedInIcon,
 } from "@/components/ui/Icons";
@@ -53,11 +53,12 @@ export function Contact({ content }: ContactProps) {
           </h3>
           <a
             href={cvHref}
-            download
+            target="_blank"
+            rel="noreferrer noopener"
             className="group mt-4 inline-flex min-h-12 w-full items-center justify-between gap-4 rounded-full border border-control px-5 text-sm text-fg transition-colors duration-200 hover:border-muted hover:bg-surface sm:w-auto sm:min-w-[16rem]"
           >
-            {content.cvDownload}
-            <DownloadIcon className="size-4 text-faint transition-colors duration-200 group-hover:text-accent" />
+            {content.cvOpen}
+            <ExternalLinkIcon className="size-4 text-faint transition-colors duration-200 group-hover:text-accent" />
           </a>
 
           <h3 className="mt-10 font-mono text-xs tracking-[0.16em] text-faint uppercase">

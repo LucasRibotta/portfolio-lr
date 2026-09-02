@@ -18,7 +18,8 @@ export const social = {
   email: `mailto:${EMAIL}`,
 } as const;
 
-export const cvHref = "/cv/lucas-ribotta-en.pdf";
+export const cvHref =
+  "https://drive.google.com/file/d/1xnNZjiKkSgkDPd3iSfleUrpoptRY7d-t/view";
 
 export const sections = [
   "home",

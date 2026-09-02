@@ -113,7 +113,7 @@ export type Dictionary = {
     copy: string;
     copied: string;
     cvLabel: string;
-    cvDownload: string;
+    cvOpen: string;
     socialLabel: string;
   };
   footer: {

@@ -1,7 +1,7 @@
 import { EmailLink } from "@/components/ui/EmailLink";
 import {
   ArrowRightIcon,
-  DownloadIcon,
+  ExternalLinkIcon,
   GitHubIcon,
   LinkedInIcon,
 } from "@/components/ui/Icons";
@@ -118,8 +118,13 @@ export function Hero({ content, cvHref }: HeroProps) {
                 </li>
 
                 <li>
-                  <a href={cvHref} download className={linkClass}>
-                    <DownloadIcon className={iconClass} />
+                  <a
+                    href={cvHref}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className={linkClass}
+                  >
+                    <ExternalLinkIcon className={iconClass} />
                     {content.cvLabel}
                   </a>
                 </li>

@@ -305,7 +305,7 @@ const es: Dictionary = {
     copy: "Copiar dirección de email",
     copied: "Copiado",
     cvLabel: "CV",
-    cvDownload: "Descargar CV (PDF)",
+    cvOpen: "Abrir CV (PDF)",
     socialLabel: "En otros lados",
   },
   footer: {

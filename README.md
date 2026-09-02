@@ -58,7 +58,7 @@ Copy lives in `content/`, never inside components. `es.ts` and `en.ts` are both 
   "Present" / "Presente". `featured: true` gives an entry the highlighted treatment.
 - **Stack** — `content/stack.ts` for the technologies, `stack.groups` in each dictionary
   for the group labels.
-- **Links, CV and site URL** — `lib/site.ts`. The CV is served from `public/cv/`.
+- **Links, CV and site URL** — `lib/site.ts`. The CV is a public Google Drive file, opened in a new tab.
 
 ## Project visuals
 
