@@ -1,4 +1,4 @@
-import { ShaderField } from "@/components/ui/ShaderField";
+import { StarField } from "@/components/ui/StarField";
 
 export function Backdrop() {
   return (
@@ -8,7 +8,7 @@ export function Backdrop() {
     >
       <div className="absolute inset-0 bg-bg" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_45%_at_50%_0%,color-mix(in_srgb,var(--color-accent)_8%,transparent),transparent_70%)]" />
-      <ShaderField />
+      <StarField />
       <div className="noise absolute inset-0" />
     </div>
   );
