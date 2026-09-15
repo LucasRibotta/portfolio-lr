@@ -12,7 +12,7 @@ const es: Dictionary = {
       work: "Trabajo",
       experience: "Experiencia",
       about: "Sobre mí",
-      stack: "Stack",
+      stack: "Tecnologías",
       contact: "Contacto",
     },
     menu: { open: "Abrir menú", close: "Cerrar menú" },
@@ -77,7 +77,7 @@ const es: Dictionary = {
     contextLabel: "Contexto",
     contributionLabel: "En qué trabajo",
     highlightsLabel: "Highlights técnicos",
-    stackLabel: "Stack",
+    stackLabel: "Tecnologías",
     gallery: {
       open: "Ver pantallas",
       close: "Cerrar",
@@ -305,8 +305,8 @@ const es: Dictionary = {
     ],
   },
   stack: {
-    eyebrow: "Stack",
-    title: "Tecnologías con las que trabajo.",
+    eyebrow: "Tecnologías",
+    title: "Las herramientas con las que trabajo.",
     groups: {
       mobile: "Mobile",
       languages: "Lenguajes",
