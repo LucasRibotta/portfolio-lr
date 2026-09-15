@@ -245,7 +245,13 @@ export function ShaderField() {
       window.removeEventListener("pointermove", onPointerMove);
       document.removeEventListener("visibilitychange", onVisibility);
       reducedMotion.removeEventListener("change", onMotionChange);
-      gl.getExtension("WEBGL_lose_context")?.loseContext();
+      // getContext() returns the same context when the effect re-runs on this
+      // canvas (Strict Mode), so losing it here would leave a dead white canvas.
+      delete canvas.dataset.ready;
+      gl.deleteBuffer(buffer);
+      gl.deleteProgram(program);
+      gl.deleteShader(vertex);
+      gl.deleteShader(fragment);
     };
   }, []);
 
