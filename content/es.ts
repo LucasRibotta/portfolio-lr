@@ -85,6 +85,28 @@ const es: Dictionary = {
       next: "Pantalla siguiente",
       position: "Pantalla",
     },
+    apps: {
+      label: "Apps publicadas",
+      intro:
+        "Apps de clientes en producción que construí o cuyo lado mobile lideré.",
+      items: {
+        docupaint: {
+          role: "Líder técnico de frontend",
+          summary:
+            "App de QA/QC para inspectores de recubrimientos industriales: formularios según normas, fotos georreferenciadas y reportes PDF. Lideré el rediseño y la nueva arquitectura, incluida la conexión Bluetooth LE con medidores y el manejo de datos offline/online.",
+        },
+        ridTurnos: {
+          role: "Desarrollador principal",
+          summary:
+            "App de pacientes para reservar turnos médicos, gestionar el grupo familiar y pedir autorizaciones a la obra social. Notificaciones push, login biométrico, chat en tiempo real con Socket.IO, OTA con EAS Update y CI/CD por entorno.",
+        },
+        mbaFceUnc: {
+          role: "Desarrollo end-to-end",
+          summary:
+            "Plataforma e-learning universitaria: app iOS y Android, backoffice Next.js y API NestJS, con login de Google, notificaciones push y generación de PDF.",
+        },
+      },
+    },
     also: {
       label: "También construí",
       intro: "Fuera de la línea mobile, y terminado lo suficiente como para abrirlo.",
@@ -104,13 +126,12 @@ const es: Dictionary = {
     },
     projects: {
       odaclick: {
-        name: "Ingeniería móvil en producción",
-        kind: "Trabajo para clientes · OdaClick",
+        kind: "Trabajo actual",
         role: "Mobile Developer",
         tagline:
-          "Aplicaciones multiplataforma publicadas en App Store y Google Play.",
+          "Apps multiplataforma que construyo para clientes, publicadas en App Store y Google Play.",
         context:
-          "Trabajo mobile sobre productos reales con usuarios reales: algunos arrancaron de cero, otros eran bases de código ya en producción que tenían que seguir funcionando mientras evolucionaban. Los datos de los clientes son confidenciales, así que lo que se describe acá es la ingeniería, no los negocios detrás.",
+          "Trabajo mobile sobre productos reales con usuarios reales: algunos arrancaron de cero, otros eran bases de código ya en producción que tenían que seguir funcionando mientras evolucionaban. Tres de esas apps son públicas y se pueden instalar desde las tiendas, más abajo.",
         contribution:
           "Tomo features de punta a punta: definición técnica, arquitectura, implementación, release y lo que pasa después. Eso implica flujos offline-first para que la aplicación siga funcionando sin conexión, integración de APIs REST, procesos en segundo plano y notificaciones, y hacerme cargo del tren de releases en las dos tiendas.",
         highlights: [
@@ -232,7 +253,7 @@ const es: Dictionary = {
       odaclick: {
         role: "Mobile Developer",
         summary:
-          "Aplicaciones móviles con usuarios reales, desde productos nuevos hasta bases de código que ya estaban en producción y tenían que seguir funcionando mientras evolucionaban. Soy responsable de las features que tomo de punta a punta: definición técnica, arquitectura, implementación, release y lo que pasa después.",
+          "Aplicaciones móviles con usuarios reales, desde productos nuevos hasta bases de código que ya estaban en producción y tenían que seguir funcionando mientras evolucionaban. Soy responsable de las features que tomo de punta a punta: definición técnica, arquitectura, implementación, release y lo que pasa después. Del lado web, soy el desarrollador principal de ISOSPECS, una plataforma de gobernanza de IA alineada con ISO/IEC 42001.",
         focus: [
           "Desarrollo móvil con React Native, Expo y Flutter",
           "Arquitectura de aplicaciones",
@@ -245,9 +266,9 @@ const es: Dictionary = {
         ],
       },
       globalview: {
-        role: "Mobile & Front-End Developer — Freelance",
+        role: "Full Stack Developer — Freelance",
         summary:
-          "Aplicaciones móviles en producción y sistemas de backoffice: nuevas features, mantenimiento, optimización de performance y evolución de código legacy.",
+          "Desarrollo full stack de una plataforma en producción: app mobile con Expo, backoffice Next.js y API NestJS. DevOps en AWS, nuevas features y evolución de código legacy sin interrumpir la operación.",
       },
       udd: {
         role: "Facilitador técnico",

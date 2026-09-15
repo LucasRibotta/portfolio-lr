@@ -85,6 +85,28 @@ const en: Dictionary = {
       next: "Next screen",
       position: "Screen",
     },
+    apps: {
+      label: "Shipped apps",
+      intro:
+        "Client apps in production that I built or led the mobile side of.",
+      items: {
+        docupaint: {
+          role: "Frontend tech lead",
+          summary:
+            "QA/QC app for industrial coating inspectors: standards-based forms, geotagged photos and PDF reports. I led the redesign and the new architecture, including the Bluetooth LE link to measurement gauges and offline/online data handling.",
+        },
+        ridTurnos: {
+          role: "Main developer",
+          summary:
+            "Patient app to book medical appointments, manage family members and request health insurance authorizations. Push notifications, biometric login, real-time chat with Socket.IO, OTA updates with EAS Update and per-environment CI/CD.",
+        },
+        mbaFceUnc: {
+          role: "End-to-end development",
+          summary:
+            "University e-learning platform: iOS and Android app, Next.js backoffice and NestJS API, with Google sign-in, push notifications and PDF generation.",
+        },
+      },
+    },
     also: {
       label: "Also built",
       intro:
@@ -105,12 +127,12 @@ const en: Dictionary = {
     },
     projects: {
       odaclick: {
-        kind: "Client work · OdaClick",
+        kind: "Current role",
         role: "Mobile Developer",
         tagline:
-          "Cross-platform applications shipped to the App Store and Google Play.",
+          "Cross-platform apps I build for clients, shipped to the App Store and Google Play.",
         context:
-          "Mobile work on real products with real users: some started from nothing, others were codebases already live that had to keep running while they evolved. Client details stay confidential, so what is described here is the engineering, not the businesses behind it.",
+          "Mobile work on real products with real users: some started from nothing, others were codebases already live that had to keep running while they evolved. Three of those apps are public, and you can install them from the stores below.",
         contribution:
           "I take features end to end — technical definition, architecture, implementation, release and what happens after it. That means offline-first flows so the application keeps working without a connection, REST API integration, background processes and notifications, and owning the release train across both stores.",
         highlights: [
@@ -232,7 +254,7 @@ const en: Dictionary = {
       odaclick: {
         role: "Mobile Developer",
         summary:
-          "Mobile applications with real users, from new products to codebases that were already live and had to keep running while they evolved. I own the features I take on end to end — technical definition, architecture, implementation, release and what happens after it.",
+          "Mobile applications with real users, from new products to codebases that were already live and had to keep running while they evolved. I own the features I take on end to end — technical definition, architecture, implementation, release and what happens after it. On the web side, I'm the main developer of ISOSPECS, an AI governance platform aligned with ISO/IEC 42001.",
         focus: [
           "Mobile development with React Native, Expo and Flutter",
           "Application architecture",
@@ -245,9 +267,9 @@ const en: Dictionary = {
         ],
       },
       globalview: {
-        role: "Mobile & Front-End Developer — Freelance",
+        role: "Full Stack Developer — Freelance",
         summary:
-          "Production mobile applications and backoffice systems: new features, maintenance, performance optimization and evolving legacy code.",
+          "Full stack development of a production platform: Expo mobile app, Next.js backoffice and NestJS API. DevOps on AWS, new features and evolving legacy code without disrupting operations.",
       },
       udd: {
         role: "Technical Facilitator",

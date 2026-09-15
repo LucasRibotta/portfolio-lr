@@ -3,6 +3,7 @@ import { Flow } from "@/components/ui/Flow";
 import { ExternalLinkIcon, PlusIcon } from "@/components/ui/Icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
+import { StoreLinks } from "@/components/ui/StoreLinks";
 import type { Dictionary } from "@/content/types";
 import { sideProjects, work } from "@/content/work";
 
@@ -218,6 +219,49 @@ export function Work({ content }: WorkProps) {
                   </Reveal>
                 ) : null}
               </div>
+
+              {project.apps ? (
+                <Reveal className="mt-14 border-t border-line pt-10">
+                  <h4 className="font-mono text-xs tracking-[0.16em] text-faint uppercase">
+                    {content.apps.label}
+                  </h4>
+                  <p className="mt-3 max-w-xl leading-relaxed text-muted">
+                    {content.apps.intro}
+                  </p>
+
+                  <ul className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    {project.apps.map((app) => {
+                      const appCopy = content.apps.items[app.id];
+                      return (
+                        <li
+                          key={app.id}
+                          className="flex h-full flex-col rounded-xl border border-line bg-surface/40 p-6"
+                        >
+                          <p className="text-lg font-medium text-fg">
+                            {app.name}
+                          </p>
+                          <p className="mt-1 font-mono text-[0.7rem] tracking-[0.14em] text-accent uppercase">
+                            {appCopy.role}
+                          </p>
+                          <p className="mt-4 text-sm leading-relaxed text-muted">
+                            {appCopy.summary}
+                          </p>
+                          <p className="mt-5 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[0.7rem] text-faint">
+                            {app.stack.map((item) => (
+                              <span key={item}>{item}</span>
+                            ))}
+                          </p>
+                          <StoreLinks
+                            appName={app.name}
+                            stores={app.stores}
+                            className="mt-auto pt-6"
+                          />
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </Reveal>
+              ) : null}
             </article>
           );
         })}

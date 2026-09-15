@@ -1,6 +1,6 @@
 import type { ExperienceId } from "./experience";
 import type { StackGroupId } from "./stack";
-import type { SideId, WorkId, WorkStatus } from "./work";
+import type { SideId, WorkAppId, WorkId, WorkStatus } from "./work";
 import type { SectionId } from "@/lib/site";
 
 export const capabilityIds = [
@@ -85,6 +85,11 @@ export type Dictionary = {
         };
       }
     >;
+    apps: {
+      label: string;
+      intro: string;
+      items: Record<WorkAppId, { role: string; summary: string }>;
+    };
     also: {
       label: string;
       intro: string;

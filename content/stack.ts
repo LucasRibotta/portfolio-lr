@@ -35,7 +35,14 @@ export const stack: readonly StackGroup[] = [
   },
   {
     id: "backend",
-    items: ["Node.js", "REST APIs", "MySQL", "PostgreSQL", "MongoDB"],
+    items: [
+      "Node.js",
+      "NestJS",
+      "REST APIs",
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+    ],
   },
   {
     id: "architecture",
@@ -43,7 +50,13 @@ export const stack: readonly StackGroup[] = [
   },
   {
     id: "delivery",
-    items: ["EAS", "App Store Connect", "TestFlight", "Google Play Console"],
+    items: [
+      "EAS",
+      "App Store Connect",
+      "TestFlight",
+      "Google Play Console",
+      "AWS",
+    ],
   },
   {
     id: "ai",

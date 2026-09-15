@@ -1,3 +1,5 @@
+import type { StoreLinks } from "./stores";
+
 export const experienceIds = [
   "odaclick",
   "globalview",
@@ -17,6 +19,7 @@ export type ExperienceEntry = {
   featured?: boolean;
   tech?: readonly string[];
   github?: string;
+  stores?: StoreLinks;
 };
 
 export const experience: readonly ExperienceEntry[] = [
@@ -34,6 +37,11 @@ export const experience: readonly ExperienceEntry[] = [
     company: "Global View",
     start: "2026-01",
     end: "2026-06",
+    stores: {
+      appStore: "https://apps.apple.com/ar/app/global-view/id6645736217",
+      googlePlay:
+        "https://play.google.com/store/apps/details?id=com.miradaglobal.globalview",
+    },
   },
   {
     id: "udd",

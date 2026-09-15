@@ -1,6 +1,19 @@
+import type { StoreLinks } from "./stores";
+
 export const workIds = ["odaclick", "orisen", "cielo", "wyrdvow"] as const;
 
 export type WorkId = (typeof workIds)[number];
+
+export const workAppIds = ["docupaint", "ridTurnos", "mbaFceUnc"] as const;
+
+export type WorkAppId = (typeof workAppIds)[number];
+
+export type WorkApp = {
+  id: WorkAppId;
+  name: string;
+  stack: readonly string[];
+  stores: StoreLinks;
+};
 
 export type WorkStatus = "inDevelopment" | "production" | "playable";
 
@@ -15,12 +28,13 @@ export type WorkProject = {
   stack?: readonly string[];
   visual?: WorkVisual;
   url?: string;
+  apps?: readonly WorkApp[];
 };
 
 export const work: readonly WorkProject[] = [
   {
     id: "odaclick",
-    name: "Production Mobile Engineering",
+    name: "OdaClick",
     status: "production",
     stack: [
       "React Native",
@@ -32,6 +46,38 @@ export const work: readonly WorkProject[] = [
       "EAS",
     ],
     visual: { kind: "flow" },
+    apps: [
+      {
+        id: "docupaint",
+        name: "DocuPaint",
+        stack: ["Expo", "React Native", "NestJS", "Bluetooth LE"],
+        stores: {
+          appStore: "https://apps.apple.com/ar/app/docupaint/id6738437184",
+          googlePlay:
+            "https://play.google.com/store/apps/details?id=com.docupaint.app",
+        },
+      },
+      {
+        id: "ridTurnos",
+        name: "RID Turnos",
+        stack: ["Expo", "React Native", "TanStack Query", "Firebase"],
+        stores: {
+          googlePlay:
+            "https://play.google.com/store/apps/details?id=com.trs24.ridturnos",
+        },
+      },
+      {
+        id: "mbaFceUnc",
+        name: "MBA FCE UNC",
+        stack: ["Expo", "React Native", "Next.js", "NestJS"],
+        stores: {
+          appStore:
+            "https://apps.apple.com/ar/app/app-graduados-fce-unc/id6749386727",
+          googlePlay:
+            "https://play.google.com/store/apps/details?id=com.mba.mba_app",
+        },
+      },
+    ],
   },
   {
     id: "orisen",

@@ -1,6 +1,7 @@
 import { GitHubIcon } from "@/components/ui/Icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
+import { StoreLinks } from "@/components/ui/StoreLinks";
 import { experience } from "@/content/experience";
 import type { Dictionary } from "@/content/types";
 import { formatPeriod } from "@/lib/format";
@@ -118,6 +119,13 @@ export function Experience({ content, locale }: ExperienceProps) {
                       <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-faint">
                         {copy.summary}
                       </p>
+                    ) : null}
+                    {entry.stores ? (
+                      <StoreLinks
+                        appName={entry.company}
+                        stores={entry.stores}
+                        className="mt-4"
+                      />
                     ) : null}
                   </div>
                 </article>
