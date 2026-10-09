@@ -47,12 +47,13 @@ export async function generateMetadata({
     authors: [{ name: "Lucas Ribotta", url: SITE_URL }],
     creator: "Lucas Ribotta",
     keywords: [
-      "Mobile Product Engineer",
+      "Senior Mobile Engineer",
       "React Native",
       "Expo",
       "TypeScript",
       "Flutter",
       "Mobile Developer",
+      "Technical Leadership",
       "Lucas Ribotta",
     ],
     alternates: {

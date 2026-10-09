@@ -41,6 +41,8 @@ export default async function HomePage({ params }: PageProps) {
       "Flutter",
       "Mobile Architecture",
       "Offline-first",
+      "Technical Leadership",
+      "ISO/IEC 42001",
     ],
   };
 

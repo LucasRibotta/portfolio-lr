@@ -1,6 +1,6 @@
 # Portfolio — Lucas Ribotta
 
-Personal site of Lucas Ribotta, Mobile Product Engineer.
+Personal site of Lucas Ribotta, Senior Mobile Engineer.
 
 Live: https://lucasr-dev.vercel.app
 

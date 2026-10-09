@@ -1,6 +1,6 @@
 import type { StoreLinks } from "./stores";
 
-export const workIds = ["odaclick", "orisen", "cielo", "wyrdvow"] as const;
+export const workIds = ["exomindset", "odaclick", "cielo", "wyrdvow"] as const;
 
 export type WorkId = (typeof workIds)[number];
 
@@ -32,6 +32,20 @@ export type WorkProject = {
 };
 
 export const work: readonly WorkProject[] = [
+  {
+    id: "exomindset",
+    name: "Exomindset",
+    status: "production",
+    stack: [
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "React Native",
+      "Claude",
+      "Mercury API",
+    ],
+    visual: { kind: "flow" },
+  },
   {
     id: "odaclick",
     name: "OdaClick",
@@ -78,13 +92,6 @@ export const work: readonly WorkProject[] = [
         },
       },
     ],
-  },
-  {
-    id: "orisen",
-    name: "Orisen",
-    status: "inDevelopment",
-    stack: ["React Native", "Expo", "TypeScript", "Bluetooth LE", "AI"],
-    visual: { kind: "flow", bidirectional: true },
   },
   {
     id: "cielo",

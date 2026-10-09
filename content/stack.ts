@@ -1,4 +1,5 @@
 export const stackGroupIds = [
+  "leadership",
   "mobile",
   "languages",
   "frontend",
@@ -18,8 +19,27 @@ export type StackGroup = {
 
 export const stack: readonly StackGroup[] = [
   {
+    id: "leadership",
+    items: [
+      "Architecture",
+      "Technical Decisions",
+      "Estimation",
+      "Code Review",
+      "Team Coordination",
+      "Release Planning",
+    ],
+  },
+  {
     id: "mobile",
-    items: ["React Native", "Expo", "Flutter", "iOS", "Android"],
+    items: [
+      "React Native",
+      "Expo",
+      "Flutter",
+      "iOS",
+      "Android",
+      "Bluetooth LE",
+      "Background Tasks",
+    ],
   },
   {
     id: "languages",
@@ -41,6 +61,7 @@ export const stack: readonly StackGroup[] = [
       "REST APIs",
       "MySQL",
       "PostgreSQL",
+      "Prisma",
       "MongoDB",
     ],
   },
@@ -56,10 +77,18 @@ export const stack: readonly StackGroup[] = [
       "TestFlight",
       "Google Play Console",
       "AWS",
+      "GitHub Actions",
     ],
   },
   {
     id: "ai",
-    items: ["Claude Code", "Codex", "AI-assisted workflows"],
+    items: [
+      "Claude",
+      "Claude Code",
+      "Claude Skills",
+      "Codex",
+      "LLM integrations",
+      "On-device AI",
+    ],
   },
 ];
