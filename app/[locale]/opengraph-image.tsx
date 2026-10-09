@@ -4,7 +4,7 @@ import { defaultLocale, isLocale, locales, SITE_URL } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Lucas Ribotta — Mobile Product Engineer";
+export const alt = "Lucas Ribotta — Senior Mobile Engineer";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

@@ -32,7 +32,7 @@ export function Experience({ content, locale }: ExperienceProps) {
 
           if (entry.featured) {
             return (
-              <li key={entry.id}>
+              <li key={entry.id} className={index > 0 ? "mt-6" : ""}>
                 <Reveal>
                   <article className="rounded-2xl border border-line bg-surface/50 p-6 sm:p-8">
                     <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
@@ -104,7 +104,10 @@ export function Experience({ content, locale }: ExperienceProps) {
           }
 
           return (
-            <li key={entry.id} className={index === 1 ? "mt-10" : ""}>
+            <li
+              key={entry.id}
+              className={experience[index - 1]?.featured ? "mt-10" : ""}
+            >
               <Reveal>
                 <article className="grid gap-2 border-t border-line py-7 sm:grid-cols-[11rem_1fr] sm:gap-8">
                   <p className="font-mono text-xs tracking-wide text-faint">

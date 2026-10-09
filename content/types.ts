@@ -6,7 +6,7 @@ import type { SectionId } from "@/lib/site";
 export const capabilityIds = [
   "mobile",
   "architecture",
-  "product",
+  "leadership",
   "ai",
 ] as const;
 

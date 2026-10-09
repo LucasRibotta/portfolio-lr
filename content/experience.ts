@@ -1,6 +1,7 @@
 import type { StoreLinks } from "./stores";
 
 export const experienceIds = [
+  "exomindset",
   "odaclick",
   "globalview",
   "udd",
@@ -24,12 +25,20 @@ export type ExperienceEntry = {
 
 export const experience: readonly ExperienceEntry[] = [
   {
+    id: "exomindset",
+    company: "Exomindset",
+    start: "2026-10",
+    end: null,
+    featured: true,
+    tech: ["React Native", "Next.js", "NestJS", "Claude", "Mercury API"],
+  },
+  {
     id: "odaclick",
     company: "OdaClick",
     start: "2024-06",
-    end: null,
+    end: "2026-09",
     featured: true,
-    tech: ["React Native", "Expo", "Flutter", "TypeScript", "EAS"],
+    tech: ["React Native", "Expo", "Flutter", "Next.js", "NestJS", "EAS"],
     github: "https://github.com/LucasRibotta7",
   },
   {

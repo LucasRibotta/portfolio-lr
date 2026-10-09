@@ -2,9 +2,9 @@ import type { Dictionary } from "./types";
 
 const es: Dictionary = {
   meta: {
-    title: "Lucas Ribotta | Mobile Product Engineer",
+    title: "Lucas Ribotta | Senior Mobile Engineer",
     description:
-      "Mobile Product Engineer especializado en React Native, Expo, TypeScript y Flutter. Construyo productos móviles escalables, desde la arquitectura hasta producción.",
+      "Senior Mobile Engineer especializado en React Native y Expo, con experiencia en liderazgo técnico, background full stack e IA aplicada. 8 apps publicadas en App Store y Google Play.",
   },
   nav: {
     items: {
@@ -20,29 +20,28 @@ const es: Dictionary = {
   },
   hero: {
     availability: "Disponible para oportunidades remotas",
-    role: "Mobile Product Engineer",
-    techLine: "React Native · Expo · TypeScript · Flutter",
-    lead: "Construyo y hago evolucionar productos móviles multiplataforma, a cargo de la arquitectura, las decisiones técnicas, la performance y la entrega en App Store y Google Play.",
+    role: "Senior Mobile Engineer",
+    techLine: "React Native · Expo · Liderazgo técnico · IA",
+    lead: "Lidero equipos y proyectos mobile desde la definición técnica hasta producción: arquitectura, releases, integraciones nativas y coordinación entre mobile, frontend y backend.",
     primaryCta: "Ver mi trabajo",
     secondaryCta: "Contactar",
     emailLabel: "Email",
     emailCopied: "Dirección copiada",
     cvLabel: "CV",
     stats: [
-      { value: "4+ años", label: "Desarrollo de software" },
-      { value: "2+ años", label: "Desarrollo mobile" },
-      { value: "iOS y Android", label: "Entrega en producción" },
+      { value: "4+ años", label: "Software en producción" },
+      { value: "8 apps", label: "Publicadas en las tiendas" },
+      { value: "Equipo de 5", label: "Liderado en mobile" },
     ],
     location: "Córdoba, Argentina",
     remote: "Trabajo remoto",
     scrollHint: "Scroll",
     nowLabel: "Actualmente",
     now: [
-      { role: "Mobile Developer", company: "OdaClick" },
-      { role: "Co-Founder & Tech Lead", company: "Orisen" },
+      { role: "Senior Full Stack Engineer", company: "Exomindset" },
     ],
     focusLabel: "Foco",
-    focus: "Arquitectura · Performance · Entrega en iOS y Android",
+    focus: "Liderazgo técnico · Arquitectura mobile · IA aplicada",
   },
   capabilities: {
     eyebrow: "Capacidades",
@@ -58,13 +57,13 @@ const es: Dictionary = {
         title: "Arquitectura y performance",
         body: "Sistemas modulares y mantenibles, sobre principios de Clean Architecture y patrones offline-first — y el trabajo de mantener rápidas, confiables y baratas de cambiar las aplicaciones que ya están en producción.",
       },
-      product: {
-        title: "Ingeniería de producto",
-        body: "Leer los requerimientos del negocio y convertirlos en soluciones técnicas, en lugar de implementar tickets de forma aislada.",
+      leadership: {
+        title: "Liderazgo técnico",
+        body: "Arquitectura, estimaciones, code review, organización del trabajo y decisiones de release — convirtiendo necesidades de negocio en soluciones concretas y acompañándolas hasta producción.",
       },
       ai: {
         title: "Ingeniería asistida por IA",
-        body: "Claude Code, Codex y flujos asistidos por IA para implementar, explorar arquitecturas, debuggear y revisar código — acelerando la entrega sin tercerizar el criterio técnico.",
+        body: "Automatizaciones con Claude dentro de procesos reales de la organización, integraciones con LLMs, IA on-device en mobile, y Claude Code y Codex en el día a día — acelerando la entrega sin tercerizar el criterio técnico.",
       },
     },
   },
@@ -88,7 +87,7 @@ const es: Dictionary = {
     apps: {
       label: "Apps publicadas",
       intro:
-        "Apps de clientes en producción que construí o cuyo lado mobile lideré.",
+        "Apps de clientes en producción que construí o cuyo lado mobile lideré en OdaClick.",
       items: {
         docupaint: {
           role: "Líder técnico de frontend",
@@ -125,55 +124,56 @@ const es: Dictionary = {
       playable: "Jugable",
     },
     projects: {
-      odaclick: {
+      exomindset: {
         kind: "Trabajo actual",
-        role: "Mobile Developer",
+        role: "Senior Full Stack Engineer",
         tagline:
-          "Apps multiplataforma que construyo para clientes, publicadas en App Store y Google Play.",
+          "Sistemas internos e IA aplicada: de la certificación ISO/IEC 42001 a los pagos masivos.",
         context:
-          "Trabajo mobile sobre productos reales con usuarios reales: algunos arrancaron de cero, otros eran bases de código ya en producción que tenían que seguir funcionando mientras evolucionaban. Tres de esas apps son públicas y se pueden instalar desde las tiendas, más abajo.",
+          "Una organización que necesitaba gobernar cómo usa la IA, cumplir estándares y dejar de resolver a mano procesos críticos como el pago a empleados. El trabajo es traducir esas necesidades de negocio en sistemas concretos y sostenerlos en producción.",
         contribution:
-          "Tomo features de punta a punta: definición técnica, arquitectura, implementación, release y lo que pasa después. Eso implica flujos offline-first para que la aplicación siga funcionando sin conexión, integración de APIs REST, procesos en segundo plano y notificaciones, y hacerme cargo del tren de releases en las dos tiendas.",
+          "Lidero técnicamente los proyectos de punta a punta: definición, arquitectura, estrategia de implementación y evolución en producción. Lideré el sistema con el que la organización obtuvo la certificación ISO/IEC 42001, estoy automatizando los pagos integrando el sistema interno con Mercury, y diseño automatizaciones con Claude para procesos como la gestión ESG.",
         highlights: [
-          "React Native, Expo y Flutter en la misma semana de trabajo",
-          "Arquitectura offline-first con persistencia local",
-          "Integración de APIs REST con manejo de errores y reintentos",
-          "Procesos en segundo plano y notificaciones push",
-          "Trabajo de performance sobre código ya en producción",
+          "Certificación ISO/IEC 42001 (AI Governance) obtenida",
+          "Inventario de sistemas de IA, riesgos y evaluaciones de impacto",
+          "Aprobaciones por rol y trazabilidad completa",
+          "Base preparada para ISO 9001 e ISO/IEC 27001",
+          "Pagos masivos a empleados vía Mercury desde un único flujo",
+          "Automatizaciones ESG con Claude",
+        ],
+        visualLabel: "Gobernanza de IA",
+        visualCaption:
+          "El flujo que sostiene la certificación ISO/IEC 42001: cada sistema de IA queda inventariado, evaluado y aprobado, con trazabilidad.",
+        flow: [
+          { title: "Inventario", detail: "Sistemas de IA" },
+          { title: "Evaluación", detail: "Riesgo e impacto" },
+          { title: "Aprobación", detail: "Por rol, trazable" },
+        ],
+      },
+      odaclick: {
+        kind: "Trabajo anterior",
+        role: "Frontend Lead",
+        tagline:
+          "Lideré el equipo mobile y el ciclo de publicación de apps de clientes en App Store y Google Play.",
+        context:
+          "Productos reales con usuarios reales: algunos arrancaron de cero, otros eran bases de código ya en producción que tenían que seguir funcionando mientras evolucionaban. Entré como Full Stack Developer y me ascendieron a Frontend Lead. Tres de esas apps son públicas y se pueden instalar desde las tiendas, más abajo.",
+        contribution:
+          "Lideré un equipo de 5 personas en React Native: arquitectura, estimaciones, code reviews, organización del trabajo y decisiones de release. Me hice cargo del ciclo completo de publicación — builds, configuración, App Store, Google Play, upgrades de Expo y compatibilidades — y formé parte del equipo técnico de referencia, coordinando mobile, frontend y backend.",
+        highlights: [
+          "Liderazgo de un equipo mobile de 5 personas",
+          "Reconstrucción de DocuPaint: nueva arquitectura y UX",
+          "Bluetooth LE con instrumentos de medición",
+          "Operación offline con sincronización posterior",
+          "Upgrades de Expo y compatibilidad iOS/Android",
           "Releases con EAS, TestFlight, App Store y Google Play",
         ],
         visualLabel: "Camino de release",
         visualCaption:
-          "El pipeline de entrega del que me hago cargo, desde el build hasta la ficha en la tienda.",
+          "El pipeline de entrega del que me hice cargo, desde el build hasta la ficha en la tienda.",
         flow: [
           { title: "Build", detail: "EAS, iOS y Android" },
           { title: "Prueba", detail: "TestFlight, testing interno" },
           { title: "Release", detail: "App Store, Google Play" },
-        ],
-      },
-      orisen: {
-        kind: "Producto · Co-fundado",
-        role: "Co-Founder & Tech Lead",
-        tagline: "Tecnología asistiva para la movilidad y la independencia.",
-        context:
-          "Moverse de forma independiente por un espacio depende de información que el entorno simplemente no le entrega a una persona con discapacidad visual. Orisen es un producto de tecnología asistiva construido para cerrar esa brecha, combinando una aplicación móvil con hardware dedicado.",
-        contribution:
-          "Lidero el lado técnico del producto: la arquitectura móvil, la aplicación en React Native y Expo, la comunicación con el hardware vía Bluetooth, la experimentación con IA y el roadmap técnico que define qué se construye después.",
-        highlights: [
-          "Arquitectura móvil diseñada desde cero",
-          "Comunicación Bluetooth con hardware dedicado",
-          "Experimentación con IA dentro del producto",
-          "Accesibilidad como requisito duro, no como capa",
-          "Entrega en iOS y Android",
-          "Liderazgo técnico y roadmap de producto",
-        ],
-        visualLabel: "Vista del sistema",
-        visualCaption:
-          "Un esquema del producto, no una captura: la aplicación se comunica con hardware dedicado por Bluetooth LE y convierte lo que ese hardware detecta en guía para la persona.",
-        flow: [
-          { title: "App móvil", detail: "React Native, Expo" },
-          { title: "Bluetooth LE", detail: "Enlace bidireccional" },
-          { title: "Hardware", detail: "Dispositivo dedicado" },
         ],
       },
       cielo: {
@@ -250,25 +250,38 @@ const es: Dictionary = {
     title: "Dónde trabajé.",
     present: "Presente",
     entries: {
-      odaclick: {
-        role: "Mobile Developer",
+      exomindset: {
+        role: "Senior Full Stack Engineer",
         summary:
-          "Aplicaciones móviles con usuarios reales, desde productos nuevos hasta bases de código que ya estaban en producción y tenían que seguir funcionando mientras evolucionaban. Soy responsable de las features que tomo de punta a punta: definición técnica, arquitectura, implementación, release y lo que pasa después. Del lado web, soy el desarrollador principal de ISOSPECS, una plataforma de gobernanza de IA alineada con ISO/IEC 42001.",
+          "Remoto · Full stack, React Native, integraciones e IA aplicada. Lidero técnicamente proyectos de punta a punta, transformando necesidades de negocio en soluciones concretas, definiendo arquitectura y estrategia de implementación, y acompañando su entrega y evolución en producción.",
         focus: [
-          "Desarrollo móvil con React Native, Expo y Flutter",
-          "Arquitectura de aplicaciones",
-          "Flujos offline-first y persistencia local",
-          "Integraciones con APIs REST",
-          "Procesos en segundo plano y notificaciones push",
-          "Performance sobre código en producción",
-          "Releases con EAS, TestFlight, App Store y Google Play",
-          "Planificación técnica con producto, diseño y backend",
+          "Automatización de pagos masivos integrando el sistema interno con Mercury",
+          "Sistema con el que la organización obtuvo la certificación ISO/IEC 42001",
+          "Inventario de IA, riesgos, evaluaciones de impacto y trazabilidad",
+          "Automatizaciones ESG con Claude",
+          "Pruebas e integraciones de IA en React Native",
+          "Liderazgo técnico de punta a punta",
+        ],
+      },
+      odaclick: {
+        role: "Frontend Lead",
+        summary:
+          "Entré como Full Stack Developer y me ascendieron a Frontend Lead. Lideré un equipo de 5 personas en React Native, definiendo arquitectura, estimaciones, code reviews, organización del trabajo y decisiones de release, y gestioné el ciclo completo de publicación de varias apps iOS/Android.",
+        focus: [
+          "Liderazgo de un equipo de 5 personas",
+          "Arquitectura, estimaciones y code review",
+          "Reconstrucción de una app de QA/QC para inspección industrial",
+          "Bluetooth LE con instrumentos de medición",
+          "Operación offline con sincronización posterior",
+          "Formularios según normas, fotos geolocalizadas y reportes PDF",
+          "Builds, App Store, Google Play y upgrades de Expo",
+          "Coordinación entre mobile, frontend y backend",
         ],
       },
       globalview: {
         role: "Full Stack Developer — Freelance",
         summary:
-          "Desarrollo full stack de una plataforma en producción: app mobile con Expo, backoffice Next.js y API NestJS. DevOps en AWS, nuevas features y evolución de código legacy sin interrumpir la operación.",
+          "Extendí un producto en producción sobre la app React Native/Expo, el backoffice Next.js y el backend NestJS, manteniendo la compatibilidad entre las tres capas. Me hice cargo de App Store, Google Play y los upgrades de Expo, e implementé background location sin interrumpir la operación.",
       },
       udd: {
         role: "Facilitador técnico",
@@ -277,7 +290,8 @@ const es: Dictionary = {
       },
       dascalendar: {
         role: "Front-End Developer",
-        summary: "Integración con Google Calendar y Microsoft Outlook.",
+        summary:
+          "Construí gran parte del frontend y los flujos de creación y configuración de eventos. Integré Stripe, Google Calendar y Microsoft Outlook para pagos, autenticación y sincronización de eventos.",
       },
       henry: {
         role: "Teaching Assistant Full Stack",
@@ -286,6 +300,8 @@ const es: Dictionary = {
       },
       sos: {
         role: "Full Stack Developer",
+        summary:
+          "Digitalicé procesos operativos internos con una plataforma de gestión construida desde el modelado de datos y los servicios backend hasta las pantallas que usaba el equipo.",
       },
     },
   },
@@ -293,21 +309,22 @@ const es: Dictionary = {
     eyebrow: "Sobre mí",
     title: "Trabajo los productos como sistemas completos.",
     paragraphs: [
-      "Soy Mobile Product Engineer y vivo en Córdoba, Argentina. Me interesa entender un producto de punta a punta: el problema del usuario, la arquitectura que lo sostiene, la implementación y todo lo que pasa después del release.",
-      "Mi trabajo se centra en la ingeniería móvil, pero también trabajé en frontend y backend. Ese contexto me permite evaluar una decisión técnica contra todo el ciclo de vida del producto y no contra una sola capa.",
+      "Soy Senior Mobile Engineer y vivo en Córdoba, Argentina. Me interesa entender un producto de punta a punta: el problema del usuario, la arquitectura que lo sostiene, la implementación y todo lo que pasa después del release.",
+      "Mi trabajo se centra en la ingeniería móvil, pero también trabajé en frontend y backend. Ese contexto me permite evaluar una decisión técnica contra todo el ciclo de vida del producto y no contra una sola capa — y lo uso al liderar equipos, donde la coordinación entre capas importa tanto como el código.",
       "Me importan la mantenibilidad, las decisiones que siguen teniendo sentido meses después y construir sistemas que un equipo pueda seguir evolucionando cuando ya no sea el único que los toca.",
     ],
     portraitAlt: "Retrato de Lucas Ribotta",
     facts: [
       { label: "Ubicación", value: "Córdoba, Argentina" },
       { label: "Disponibilidad", value: "Remoto, full-time" },
-      { label: "Foco", value: "Ingeniería de producto móvil" },
+      { label: "Foco", value: "Mobile, liderazgo técnico e IA" },
     ],
   },
   stack: {
     eyebrow: "Tecnologías",
     title: "Las herramientas con las que trabajo.",
     groups: {
+      leadership: "Liderazgo técnico",
       mobile: "Mobile",
       languages: "Lenguajes",
       frontend: "Frontend",
